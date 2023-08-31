@@ -1,8 +1,8 @@
-SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
-FROM employee e
-JOIN salaries s
-ON e.emp_no = s.emp_no
-LIMIT 80000;
+SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary 
+FROM salaries AS s
+INNER JOIN employee AS e ON s.emp_no = e.emp_no
+ORDER BY emp_no
+LIMIT 1000;
 
 SELECT first_name, last_name, hire_date 
 FROM employee
